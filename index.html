@@ -113,7 +113,7 @@ pml.testing[,c(&quot;num_window&quot;)] &lt;- NULL</code></pre>
 sub75.train &lt;- pml.training[in.pml.training,]
 sub25.train &lt;- pml.training[-in.pml.training,]</code></pre>
 <p><em>The sub75.train dataset has 14718, 53 observations.</em> <em>The sub25.train dataset has 4904, 53 observations.</em></p>
-<p>Random Fmorests was selected as a learning method to correlate the construction of multiple decision trees and being able to decide a final predicted outcome across all the trees.</p>
+<p>Random Forests was selected as a learning method to correlate the construction of multiple decision trees and being able to decide a final predicted outcome across all the trees.</p>
 <p>Other models eliminated were Trees (too much data to split into groups manually), Bagging (could be used with Trees but Bagging is extended in Random Forests), and Boosting (since our predictors are actual device measurements they don’t seem weak enough to benefit from Boosting).</p>
 <p>Now, we’ll train our model using the randomForest function. This function was selected due to it’s speed and performance fitting our model using every value except “classe”.</p>
 <pre class="r"><code>library(randomForest)</code></pre>
